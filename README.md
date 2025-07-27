@@ -21,6 +21,7 @@ What are the key global weather patterns and relationships between meteorologica
 - What meteorological variables are most predictive of temperature?
 - Can machine learning achieve high-precision weather prediction?
 
+
 #### Data Sources
 
 **Source**: [Global Weather Repository - Kaggle](https://www.kaggle.com/datasets/nelgiriyewithana/global-weather-repository)
@@ -34,7 +35,7 @@ What are the key global weather patterns and relationships between meteorologica
 - **Air quality metrics**: PM2.5, PM10, ozone, carbon monoxide, nitrogen dioxide, sulfur dioxide
 - **Geographic info**: Latitude, longitude, country, location names
 - **Temporal data**: Timestamps, sunrise/sunset times, moon phases
-- **Derived features**: Feels-like temperature, visibility, weather conditions
+- **Derived features**: Hour/month extraction, temperature-humidity interaction, comfort index, air quality composite, geographic zones, wind direction encoding, weather severity index
 
 #### Methodology
 
@@ -90,7 +91,7 @@ What are the key global weather patterns and relationships between meteorologica
 
 #### Next steps
 
-**Current focus:**
+**Next focus:**
 1. **Recursive Feature Elimination**: Identify optimal feature subset for improved model performance
 2. **Multiple Regression & Decision Trees with  RFE Features**: Compare regression models using RFE-selected features
 3. **Hyperparameter Tuning with Grid Search  RFE Features**: Optimize model parameters for maximum accuracy
@@ -98,10 +99,9 @@ What are the key global weather patterns and relationships between meteorologica
 5. **Comparative Neural Network Analysis Using RFE Features**: Deep learning models with feature-selected inputs
 
 **Long-term goals**
-1. **Deep Learning**: Explore neural networks for complex pattern recognition
-2. **Satellite Integration**: Incorporate satellite imagery for enhanced predictions
-3. **Climate Change Analysis**: Long-term trend analysis and projection modeling
-4. **Real-time System**: Deploy production-ready API for weather pattern analysis
+1. **Satellite Integration**: Incorporate satellite imagery for enhanced predictions
+2. **Climate Change Analysis**: Long-term trend analysis and projection modeling
+3. **Real-time System**: Deploy production-ready API for weather pattern analysis
 
 #### Outline of project
 
