@@ -7,7 +7,7 @@ Shreyas Satyanarayana
 
 #### Executive summary
 
-This project conducts a comprehensive analysis of global weather patterns using machine learning techniques on 80,866 weather observations from 248 locations across 210 countries. The analysis reveals critical climate insights including an 18°C temperature gradient from equatorial to polar regions and identifies that 21% of monitored locations exceed WHO air quality standards. Our baseline linear regression model achieves exceptional accuracy (R² = 0.9994) with ±0.28°C precision using 10 key meteorological features, demonstrating the effectiveness of machine learning for high-precision weather prediction while highlighting global air quality challenges requiring immediate attention.
+This project conducts a comprehensive analysis of global weather patterns using machine learning techniques on 80,866 weather observations from 248 locations across 210 countries. The analysis reveals critical climate insights including an 18°C temperature gradient from equatorial to polar regions and identifies that 21% of monitored locations exceed WHO air quality standards. Our baseline linear regression model achieves moderate performance (R² = 0.443) with ±6.89°C precision using 9 key meteorological features, establishing a foundation for advanced modeling while highlighting global air quality challenges requiring immediate attention.
 
 #### Rationale
 
@@ -59,7 +59,7 @@ What are the key global weather patterns and relationships between meteorologica
 - **Geographic Analysis**: Country-level aggregations and climate zone comparisons
 
 **4. Machine Learning Model Development**
-- Linear regression baseline using 10 selected features (feels_like_celsius, latitude, humidity, pressure_mb, wind_kph, visibility_km, uv_index, cloud, hour, month)
+- Linear regression baseline using 9 selected features (latitude, humidity, pressure_mb, wind_kph, visibility_km, uv_index, cloud, hour, month)
 - Train/test split (80/20) with random_state=42 for reproducibility
 - 5-fold cross-validation for robust performance estimation
 - Feature coefficient analysis for model interpretability
@@ -79,10 +79,11 @@ What are the key global weather patterns and relationships between meteorologica
 - **Distribution**: 42.4% excellent air quality, 36.8% good, 20.9% unhealthy
 
 **Machine Learning Model Performance:**
-- **Accuracy**: R² = 0.9994 (99.94% of temperature variance explained)
-- **Precision**: RMSE = 0.28°C, MAE = 0.18°C (exceptional prediction accuracy)
-- **Stability**: Cross-validation R² = 0.372 ± 0.064 (robust performance)
+- **Accuracy**: R² = 0.443 (44.3% of temperature variance explained)
+- **Precision**: RMSE = 6.89°C, MAE = 5.58°C (moderate prediction accuracy)
+- **Stability**: Cross-validation R² = 0.372 ± 0.064 (robust performance across folds)
 - **Feature Importance**: UV Index (+0.859°C/unit), Hour (+0.165°C/unit), Pressure (-0.162°C/unit)
+- **Interpretation**: Moderate baseline performance establishes foundation for advanced modeling and RFE optimization
 
 **Extreme Weather Insights:**
 - **Frequency**: 4,656 extreme weather events (5.8% of observations)
@@ -165,8 +166,9 @@ os
 ```
 
 ### Key Findings Summary
-- **99.94% prediction accuracy** for global temperature using 10 meteorological features
+- **44.3% baseline accuracy** for global temperature using 9 meteorological features (moderate performance with improvement potential)
 - **18°C temperature gradient** from equatorial to polar regions
 - **21% of locations exceed WHO air quality standards** requiring immediate attention
 - **5.8% extreme weather frequency** with geographic concentration patterns
 - **Complete dataset quality** with zero missing values across 80,866 observations
+- **RFE optimization ready** for advanced modeling and feature selection enhancement
